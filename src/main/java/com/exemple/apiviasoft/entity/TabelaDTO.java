@@ -7,6 +7,7 @@ public class TabelaDTO {
     private String retornoAutorizacao;
     private String inutilizacao;
 
+
     //construtores
 
 
@@ -17,7 +18,6 @@ public class TabelaDTO {
         this.inutilizacao = inutilizacao;
 
     }
-
 
 
     public String getAutorizador() {

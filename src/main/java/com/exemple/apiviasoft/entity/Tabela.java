@@ -28,6 +28,7 @@ public class Tabela {
     @Temporal(TemporalType.TIMESTAMP)
     private Date date = new java.sql.Date(System.currentTimeMillis());
 
+
     public Tabela(){
 
     }
