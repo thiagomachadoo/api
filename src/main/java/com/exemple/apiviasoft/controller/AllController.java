@@ -6,9 +6,8 @@ import com.exemple.apiviasoft.repository.TabelaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.util.SimpleIdGenerator;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
+
 
 import java.util.List;
 
@@ -30,6 +29,12 @@ public class AllController {
         tabela.setAutorizacao(dto.getAutorizacao());
         tabela.setRetornoAutorizacao(dto.getRetornoAutorizacao());
         tabela.setInutilizacao(dto.getInutilizacao());
+        tabela.setConsultaProtocolo(dto.getConsultaProtocolo());
+        tabela.setStatusServico(dto.getStatusServico());
+        tabela.setTempoMedio(dto.getTempoMedio());
+        tabela.setConsultaCadastro(dto.getConsultaCadastro());
+        tabela.setRecepcaoEvento(dto.getRecepcaoEvento());
+
         repository.save(tabela);
     }
     @PutMapping

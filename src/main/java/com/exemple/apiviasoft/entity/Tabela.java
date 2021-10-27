@@ -1,9 +1,5 @@
 package com.exemple.apiviasoft.entity;
-
-import com.sun.istack.NotNull;
-
 import javax.persistence.*;
-import javax.validation.constraints.Size;
 import java.util.Date;
 
 @Entity
@@ -13,18 +9,19 @@ public class Tabela {
     @Id
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
     private Long id;
-    @NotNull
-    @Size(min = 2, max = 5)
+
     private String autorizador;
-    @NotNull
-    @Size(min = 2, max = 3)
     private String autorizacao;
-    @NotNull
-    @Size(min = 2, max = 3)
     private String retornoAutorizacao;
-    @NotNull
-    @Size(min = 2, max = 3)
     private String inutilizacao;
+    private String consultaProtocolo;
+    private String statusServico;
+    private String tempoMedio;
+    private String consultaCadastro;
+    private String recepcaoEvento;
+
+
+
     @Temporal(TemporalType.TIMESTAMP)
     private Date date = new java.sql.Date(System.currentTimeMillis());
 
@@ -81,5 +78,46 @@ public class Tabela {
 
     public void setInutilizacao(String inutilizacao) {
         this.inutilizacao = inutilizacao;
+    }
+
+    public String getConsultaProtocolo() {
+        return consultaProtocolo;
+    }
+
+    public void setConsultaProtocolo(String consultaProtocolo) {
+        this.consultaProtocolo = consultaProtocolo;
+    }
+
+    public String getStatusServico() {
+        return statusServico;
+    }
+
+    public void setStatusServico(String statusServico) {
+        this.statusServico = statusServico;
+    }
+
+    public String getTempoMedio() {
+        return tempoMedio;
+    }
+
+    public void setTempoMedio(String tempoMedio) {
+        this.tempoMedio = tempoMedio;
+    }
+
+    public String getConsultaCadastro() {
+        return consultaCadastro;
+    }
+
+    public void setConsultaCadastro(String consultaCadastro) {
+        this.consultaCadastro = consultaCadastro;
+    }
+
+    public String getRecepcaoEvento() {
+        return recepcaoEvento;
+    }
+
+
+    public void setRecepcaoEvento(String recepcaoEvento) {
+        this.recepcaoEvento = recepcaoEvento;
     }
 }

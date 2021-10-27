@@ -10,4 +10,5 @@ import java.util.List;
 public interface TabelaRepository extends JpaRepository<Tabela, Long> {
     public List<Tabela> findAllByAutorizadorContainingIgnoreCase (String autorizador);
 
+
 }
