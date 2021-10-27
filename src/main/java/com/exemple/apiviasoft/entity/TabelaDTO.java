@@ -6,7 +6,6 @@ public class TabelaDTO {
     private String autorizacao;
     private String retornoAutorizacao;
     private String inutilizacao;
-
     private String consultaProtocolo;
     private String statusServico;
     private String tempoMedio;
